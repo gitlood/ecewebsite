@@ -1,0 +1,998 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A new day: career paths out of the ECE classroom, from Whanganui</title>
+<meta name="description" content="Scroll from before dawn to morning through researched career paths for an experienced ECE head teacher in Whanganui: local roles, pay, study and real stories.">
+<meta name="theme-color" content="#0b1131">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌅</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: dark;
+  --ink: #f2f4ff; --muted: #b9c0e6; --panel: rgba(11, 17, 49, 0.80); --line: rgba(185, 192, 230, 0.22);
+  --glow: #ffc36a; --link: #ffd58a;
+  --yes-bg: rgba(124, 201, 142, 0.22); --yes-ink: #b8f0c4;
+  --maybe-bg: rgba(246, 211, 90, 0.22); --maybe-ink: #ffe59a;
+  --no-bg: rgba(185, 192, 230, 0.16); --no-ink: #d4d9f2;
+  --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --text: "Figtree", "Segoe UI", system-ui, sans-serif;
+  --sky-top: #0b1131; --sky-bottom: #1a2150; --stars: 1; --sun: 0; --head-ink: #f2f4ff; --head-shadow: 0 2px 18px rgba(11,17,49,0.55);
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+*, *::before, *::after { box-sizing: inherit; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 5rem); background: #0b1131; }
+body { margin: 0; color: var(--ink); font-family: var(--text); font-size: 1.0625rem; line-height: 1.65;
+  background: transparent; padding-bottom: 7rem; }
+a { color: var(--link); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--glow); outline-offset: 3px; border-radius: 6px; }
+.skip { position: absolute; left: -999px; top: 0.5rem; z-index: 20; background: #0b1131; color: var(--ink); padding: 0.5rem 1rem; }
+.skip:focus { left: 0.5rem; }
+
+/* The sky */
+.sky { position: fixed; inset: 0; z-index: -1; overflow: hidden;
+  background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-bottom) 100%); }
+.stars { position: absolute; inset: 0; opacity: var(--stars);
+  background-image:
+    radial-gradient(1.4px 1.4px at 12% 18%, #fff 50%, transparent 52%),
+    radial-gradient(1px 1px at 28% 42%, #fff 50%, transparent 52%),
+    radial-gradient(1.6px 1.6px at 46% 12%, #fff 50%, transparent 52%),
+    radial-gradient(1px 1px at 63% 30%, #fff 50%, transparent 52%),
+    radial-gradient(1.3px 1.3px at 78% 16%, #fff 50%, transparent 52%),
+    radial-gradient(1px 1px at 88% 44%, #fff 50%, transparent 52%),
+    radial-gradient(1.2px 1.2px at 6% 58%, #fff 50%, transparent 52%),
+    radial-gradient(1px 1px at 36% 66%, #fff 50%, transparent 52%),
+    radial-gradient(1.4px 1.4px at 70% 60%, #fff 50%, transparent 52%),
+    radial-gradient(1px 1px at 94% 72%, #fff 50%, transparent 52%);
+  background-size: 520px 420px; }
+.sun { position: absolute; left: 50%; bottom: 0; width: min(70vw, 560px); aspect-ratio: 1; border-radius: 50%;
+  transform: translate(-50%, calc(70% - var(--sun) * 55%));
+  background: radial-gradient(circle at 50% 50%, #fff4d6 0%, #ffd27a 32%, rgba(255, 170, 90, 0.55) 52%, rgba(255, 140, 90, 0) 70%);
+  opacity: calc(0.15 + var(--sun) * 0.85); }
+.hills { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 22vh; }
+.hills path:first-child { fill: rgba(11, 17, 49, 0.55); }
+.hills path:last-child { fill: rgba(11, 17, 49, 0.85); }
+
+/* Clock */
+.clock { position: fixed; top: calc(env(safe-area-inset-top, 0px) + 1rem); right: 1rem; z-index: 10;
+  display: flex; align-items: baseline; gap: 0.6rem; padding: 0.5rem 0.95rem; border-radius: 999px;
+  background: rgba(11, 17, 49, 0.72); border: 1px solid var(--line); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  font-family: var(--display); }
+.clock .t { font-weight: 700; font-size: 1.1rem; font-variant-numeric: tabular-nums; }
+.clock .l { color: var(--muted); font-size: 0.9rem; }
+
+/* Hero */
+.hero { min-height: 100svh; display: flex; flex-direction: column; justify-content: center;
+  padding: 6rem clamp(1.25rem, 6vw, 5rem) 8rem; max-width: 72rem; margin: 0 auto; }
+.hero .eyebrow-time { font-family: var(--display); color: var(--muted); font-size: 1.05rem; margin: 0 0 1rem; }
+.hero h1 { font-family: var(--display); font-weight: 800; font-size: clamp(2.8rem, 8vw, 6.5rem);
+  line-height: 0.98; letter-spacing: -0.03em; margin: 0 0 1.5rem; max-width: 12ch; text-wrap: balance; }
+.hero p.lede { font-size: clamp(1.15rem, 2vw, 1.4rem); color: var(--muted); max-width: 46ch; margin: 0 0 2.5rem; }
+.hero .start { display: inline-flex; align-items: center; gap: 0.6rem; align-self: flex-start;
+  font-family: var(--display); font-weight: 700; font-size: 1.1rem; color: #0b1131; background: var(--glow);
+  padding: 0.85rem 1.4rem; border-radius: 999px; text-decoration: none; }
+.hero .start:hover { background: #ffd58a; }
+.hero .icons { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 3rem 0 0; padding: 0; list-style: none; }
+
+/* Tiles */
+.tile { display: inline-grid; place-items: center; width: 3.4rem; height: 3.4rem; border-radius: 0.95rem;
+  background: var(--g); color: #fff; box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 6px 18px rgba(0,0,0,0.25); flex: none; }
+
+/* Chapters */
+main { max-width: 60rem; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2rem); }
+.chapter { padding: 18vh 0 0; }
+.chapter:first-child { padding-top: 4vh; }
+.chapter-head { display: flex; align-items: center; gap: 1rem; margin: 0 0 1.25rem; }
+.chapter-head .time { margin: 0; font-family: var(--display); color: var(--head-ink); opacity: 0.85; font-size: 1rem;
+  font-variant-numeric: tabular-nums; text-shadow: var(--head-shadow); transition: color 0.4s; }
+.chapter-head h2 { margin: 0; font-family: var(--display); font-weight: 800; font-size: clamp(1.9rem, 4.5vw, 3.1rem);
+  line-height: 1.02; letter-spacing: -0.02em; text-wrap: balance; color: var(--head-ink); text-shadow: var(--head-shadow); transition: color 0.4s; }
+html.day { --head-ink: #0b1131; --head-shadow: 0 1px 12px rgba(255,255,255,0.45); }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 1.5rem;
+  padding: clamp(1.25rem, 3.5vw, 2.25rem); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 20px 60px rgba(5, 8, 30, 0.35); }
+.panel > :first-child { margin-top: 0; }
+.panel > :last-child { margin-bottom: 0; }
+.panel p, .panel ul, .panel ol { max-width: 66ch; }
+.panel p { margin: 0 0 1rem; }
+.panel li { margin: 0.45rem 0; }
+.panel strong { font-weight: 600; color: #fff; }
+#summary .panel p:first-child { font-size: clamp(1.2rem, 2.2vw, 1.45rem); line-height: 1.5; color: #fff; }
+#stories .panel p strong:first-child { display: block; font-family: var(--display); font-size: 1.2rem; margin-bottom: 0.25rem; color: var(--glow); }
+#next .panel ol { counter-reset: step; list-style: none; padding: 0; }
+#next .panel ol li { counter-increment: step; position: relative; padding-left: 3rem; margin: 0.9rem 0; }
+#next .panel ol li::before { content: counter(step); position: absolute; left: 0; top: -0.1rem; width: 2.1rem; height: 2.1rem;
+  display: grid; place-items: center; border-radius: 50%; background: var(--glow); color: #0b1131; font-family: var(--display); font-weight: 700; }
+#references .panel ul { padding-left: 1.1rem; font-size: 0.95rem; }
+
+/* Tables */
+.table-wrap { overflow-x: auto; margin: 1.25rem 0 1.5rem; border: 1px solid var(--line); border-radius: 1rem; }
+table { border-collapse: collapse; width: 100%; min-width: 46rem; font-size: 0.94rem; line-height: 1.45; }
+th, td { text-align: left; vertical-align: top; padding: 0.75rem 0.9rem; border-bottom: 1px solid var(--line); }
+th { font-family: var(--display); font-weight: 500; color: var(--muted); background: rgba(255,255,255,0.05); white-space: nowrap; }
+tr:last-child td { border-bottom: 0; }
+td:first-child { font-weight: 600; color: #fff; }
+.tag { display: inline-block; padding: 0.12rem 0.6rem; border-radius: 999px; font-family: var(--display); font-size: 0.85rem; font-weight: 500; white-space: nowrap; }
+.tag-yes { background: var(--yes-bg); color: var(--yes-ink); }
+.tag-maybe { background: var(--maybe-bg); color: var(--maybe-ink); }
+.tag-no { background: var(--no-bg); color: var(--no-ink); }
+
+/* Closing */
+.morning { max-width: 60rem; margin: 0 auto; padding: 22vh clamp(1rem, 4vw, 2rem) 8vh; text-align: center; }
+.morning h2 { font-family: var(--display); font-weight: 800; font-size: clamp(2.4rem, 7vw, 5rem); line-height: 1; letter-spacing: -0.03em;
+  margin: 0 0 1rem; color: #0b1131; text-wrap: balance; }
+.morning p { margin: 0 auto 2rem; max-width: 40ch; font-size: 1.2rem; color: #17204f; }
+.morning a { display: inline-block; font-family: var(--display); font-weight: 700; color: #fff; background: #0b1131;
+  padding: 0.85rem 1.4rem; border-radius: 999px; text-decoration: none; }
+.morning small { display: block; margin-top: 3rem; color: #17204f; font-size: 0.85rem; }
+
+/* Dock */
+.dock { position: fixed; left: 50%; bottom: calc(env(safe-area-inset-bottom, 0px) + 0.9rem); transform: translateX(-50%); z-index: 10;
+  max-width: calc(100vw - 1.5rem); overflow-x: auto; scrollbar-width: none;
+  background: rgba(11, 17, 49, 0.72); border: 1px solid var(--line); border-radius: 1.4rem; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.dock::-webkit-scrollbar { display: none; }
+.dock ul { display: flex; gap: 0.35rem; margin: 0; padding: 0.5rem; list-style: none; }
+.dock a { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; text-decoration: none; color: var(--muted);
+  padding: 0.2rem 0.25rem; border-radius: 0.8rem; min-width: 3.6rem; }
+.dock .tile { width: 2.5rem; height: 2.5rem; border-radius: 0.7rem; transition: transform 0.15s; }
+.dock a:hover .tile { transform: translateY(-3px); }
+.dock a[aria-current="true"] { color: #fff; }
+.dock a[aria-current="true"] .tile { outline: 2px solid var(--glow); outline-offset: 2px; }
+.dock-label { font-family: var(--display); font-size: 0.7rem; white-space: nowrap; }
+@media (max-width: 640px) {
+  .clock .l { display: none; }
+  .clock { top: auto; bottom: calc(env(safe-area-inset-bottom, 0px) + 6.4rem); right: 0.75rem; padding: 0.35rem 0.75rem; }
+  .clock .t { font-size: 0.95rem; }
+  .chapter { padding-top: 12vh; }
+  .chapter-head .tile { width: 2.8rem; height: 2.8rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .dock .tile { transition: none; }
+}
+@media print {
+  .sky, .clock, .dock, .hero .start { display: none; }
+  html, body { background: #fff; color: #000; }
+  .panel { background: none; border: 0; box-shadow: none; backdrop-filter: none; color: #000; }
+  .chapter-head h2, .panel strong, td:first-child { color: #000; text-shadow: none; }
+  a { color: #1a3a8a; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="sky" aria-hidden="true">
+  <div class="stars"></div>
+  <div class="sun"></div>
+  <svg class="hills" viewBox="0 0 1440 200" preserveAspectRatio="none">
+    <path d="M0 120 C200 70 340 90 520 110 S860 60 1040 90 1300 120 1440 80 V200 H0z"/>
+    <path d="M0 160 C180 130 380 150 560 140 S900 120 1100 150 1320 140 1440 130 V200 H0z"/>
+  </svg>
+</div>
+
+<div class="clock" role="status" aria-live="off"><span class="t">4:45 am</span><span class="l">Before dawn</span></div>
+
+<header class="hero">
+  <p class="eyebrow-time">4:45 am, Whanganui</p>
+  <h1>Your next chapter starts at sunrise</h1>
+  <p class="lede">You've spent a long career leading tamariki, kaiako and whānau. Now it's time for work that uses all of it, without the ratios. Scroll, and the sun comes up on fifteen chapters of real options, local employers, pay and people who've already made the move.</p>
+  <a class="start" href="#summary">Start the day</a>
+</header>
+
+<main id="main">
+
+<section class="chapter" id="summary" aria-labelledby="summary-h" data-time="5:00 am" data-label="Start">
+  <header class="chapter-head">
+    <span class="tile" style="--g:linear-gradient(140deg,#3a3f9e,#7b5cd6)"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17h18M6 17a6 6 0 0 1 12 0M12 5v3M5.6 8.6l2 2M18.4 8.6l-2 2"/></svg></span>
+    <div><p class="time">5:00 am</p><h2 id="summary-h">The short version</h2></div>
+  </header>
+  <div class="panel">
+<p>An experienced ECE head teacher living in Whanganui has at least six next steps that move out of day-to-day teaching of children and can be done locally: home-based coordination, kindergarten senior teacher roles, visiting lecturing, UCOL lecturing, non-teaching centre management and consultancy. The Education Review Office (ERO), which took over ECE licensing and regulation on 1 September 2026, is a strong seventh if it can be based locally with travel.</p>
+<p>Outside ECE, the strongest Whanganui options are Ministry of Education adviser roles, MSD case management and Corrections case management, all with local offices and pay similar to or above head teacher pay.</p>
+<p>Most options can be tested part-time before leaving a current role. The most accessible starting points are local home-based services such as PAUA Early Childhood, UCOL Whanganui, NZTC visiting lecturer contracts and He Whānau Manaaki Kindergarten Association. A master's degree unlocks the higher-paid academic and senior roles.</p>
+<p>Lecturing still means teaching, but of adults. When applying for anything here, ask whether the role includes ratio cover or relief teaching, because some management and coordinator roles do.</p>
+</div>
+</section>
+<section class="chapter" id="whanganui" aria-labelledby="whanganui-h" data-time="5:15 am" data-label="Whanganui">
+  <header class="chapter-head">
+    <span class="tile" style="--g:linear-gradient(140deg,#1f6f8b,#3fb0c9)"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11z"/><circle cx="12" cy="10" r="2.2"/></svg></span>
+    <div><p class="time">5:15 am</p><h2 id="whanganui-h">Can it be done from Whanganui?</h2></div>
+  </header>
+  <div class="panel">
+<p>Every option on this site has been checked for whether it can be done while living in Whanganui. Options that only exist in other cities are flagged.</p>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Based in Whanganui?</th>
+<th>Local employers or routes</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Home-based visiting teacher / coordinator</td>
+<td><span class="tag tag-yes">Yes</span></td>
+<td>PAUA Early Childhood (director based in Whanganui), Ignite Homebased ECE, Barnardos (visiting teacher covers Whanganui and Rangitīkei), Tiny Nation Taranaki Whanganui</td>
+<td><a href="https://ero.govt.nz/node/1890" target="_blank" rel="noopener noreferrer">PAUA</a>, <a href="https://ero.govt.nz/node/1182" target="_blank" rel="noopener noreferrer">Ignite</a>, <a href="https://www.nzherald.co.nz/whanganui-chronicle/news/barnardos-whanganui-still-offering-home-based-learning-despite-citys-office-closing/ESO7MRSWP3MWNBFBXKNW3JUJRM" target="_blank" rel="noopener noreferrer">Barnardos</a></td>
+</tr>
+<tr>
+<td>Kindergarten senior teacher</td>
+<td><span class="tag tag-yes">Yes</span></td>
+<td>He Whānau Manaaki Kindergarten Association governs the Whanganui kindergartens and employs senior teachers</td>
+<td><a href="https://www.wmkindergartens.org.nz/assets/About-Us/Annual-Reports/201819-Annual-Report_82627_2.pdf" target="_blank" rel="noopener noreferrer">Annual report</a></td>
+</tr>
+<tr>
+<td>Visiting lecturer / practicum assessor</td>
+<td><span class="tag tag-yes">Yes</span></td>
+<td>NZTC advertises for Whanganui; UCOL Whanganui places students in local centres</td>
+<td><a href="https://jobs.smartrecruiters.com/UpEducation/6000000000890047-visiting-lecturer" target="_blank" rel="noopener noreferrer">NZTC Whanganui</a></td>
+</tr>
+<tr>
+<td>Lecturer</td>
+<td><span class="tag tag-yes">Yes, at UCOL</span></td>
+<td>UCOL Whanganui teaches the Bachelor of Teaching (ECE) and Level 5 diploma locally</td>
+<td><a href="https://www.ucol.ac.nz/programmes/education/te-tohu-paetahi-akoranga-bachelor-of-teaching-(early-childhood-education)" target="_blank" rel="noopener noreferrer">UCOL</a></td>
+</tr>
+<tr>
+<td>ERO review officer or regulatory role</td>
+<td><span class="tag tag-maybe">Likely, with travel</span></td>
+<td>ERO had a Whanganui regional office in 2021 and has advertised some roles as remote</td>
+<td><a href="https://ero.govt.nz/sites/default/files/media-documents/2021-04/OIA-Working-from-home-June-2021.pdf" target="_blank" rel="noopener noreferrer">ERO OIA, 2021</a>, <a href="https://jobs.govt.nz/jobs/Remote/NZERO-1924702NOR" target="_blank" rel="noopener noreferrer">remote listing</a></td>
+</tr>
+<tr>
+<td>Centre manager</td>
+<td><span class="tag tag-yes">Yes</span></td>
+<td>Local centres such as Lots of Hugs Broadway advertise; target non-teaching manager roles</td>
+<td><a href="https://www.jobleads.com/nz/job/centre-manager-ece--whanganui--e7f29756956563d55e961357d6101576f" target="_blank" rel="noopener noreferrer">Listing</a></td>
+</tr>
+<tr>
+<td>Area manager</td>
+<td><span class="tag tag-maybe">Possibly</span></td>
+<td>Large providers' area roles often cover several towns; ask whether Whanganui can be the base</td>
+<td>—</td>
+</tr>
+<tr>
+<td>PLD facilitator</td>
+<td><span class="tag tag-maybe">Possibly</span></td>
+<td>Playcentre employs regional facilitators for the Central North Island</td>
+<td><a href="https://www.playcentre.org.nz/learnwithus/meet-our-pld-team" target="_blank" rel="noopener noreferrer">Playcentre PLD team</a></td>
+</tr>
+<tr>
+<td>Edtech or resource roles</td>
+<td><span class="tag tag-yes">Yes, remote</span></td>
+<td>Some NZ ECE edtech roles are fully remote</td>
+<td><a href="https://twinkl.tribepad.com/members/modules/job/detail.php?record=109" target="_blank" rel="noopener noreferrer">Twinkl listing</a></td>
+</tr>
+<tr>
+<td>Consultancy or owning a service</td>
+<td><span class="tag tag-yes">Yes</span></td>
+<td>Self-employed; clients across Manawatū–Whanganui</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Ministry of Education, MSD, Corrections</td>
+<td><span class="tag tag-yes">Yes</span></td>
+<td>Local offices; see out-of-industry options below</td>
+<td><a href="#outside">See below</a></td>
+</tr>
+<tr>
+<td>University lecturer, national policy roles</td>
+<td><span class="tag tag-no">No</span></td>
+<td>City-based (Auckland, Hamilton, Wellington); kept for reference only</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</section>
+<section class="chapter" id="ero" aria-labelledby="ero-h" data-time="5:30 am" data-label="ERO">
+  <header class="chapter-head">
+    <span class="tile" style="--g:linear-gradient(140deg,#5b3fa0,#c05ac0)"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="5.5"/><path d="M15 15l5 5M8.5 10.5l1.6 1.6 3-3.2"/></svg></span>
+    <div><p class="time">5:30 am</p><h2 id="ero-h">Option 1: Education Review Office</h2></div>
+  </header>
+  <div class="panel">
+<p>ERO is the most timely option in the sector because it now both evaluates and regulates ECE services. From 1 September 2026 it became responsible for licensing, certification, compliance monitoring, complaints, incident responses and enforcement, functions that sat with the Ministry of Education until then (<a href="https://www.ero.govt.nz/early-learning/understanding-our-regulatory-role-in-ece-and-kohungahunga/learn-about-the-transfer-of-regulations-to-ero" target="_blank" rel="noopener noreferrer">ERO</a>).</p>
+<ul>
+<li><strong>Review Officer (Early Childhood Education):</strong> reviews and reports on the quality of education in early childhood services. Recent listings have been in <a href="https://careers.ero.govt.nz/jobs/Napier/NZERO-1859142N" target="_blank" rel="noopener noreferrer">Napier</a> and <a href="https://jobs.govt.nz/jobs/Hamilton/NZERO-1911241" target="_blank" rel="noopener noreferrer">Hamilton</a>.</li>
+<li><strong>Regulatory and licensing roles:</strong> new roles support the transfer of ECE regulation to ERO (<a href="https://jobs.govt.nz/jobs/Auckland/NZERO-1926749" target="_blank" rel="noopener noreferrer">example listing</a>).</li>
+</ul>
+<p><strong>How your current job relates:</strong> internal evaluation, licensing compliance, Te Whāriki knowledge, writing reports for whānau, and having been on the receiving end of ERO reviews yourself.</p>
+<p><strong>From Whanganui:</strong> likely workable. ERO listed a Whanganui regional office in 2021 (<a href="https://ero.govt.nz/sites/default/files/media-documents/2021-04/OIA-Working-from-home-June-2021.pdf" target="_blank" rel="noopener noreferrer">OIA response</a>) and has advertised some roles as remote (<a href="https://jobs.govt.nz/jobs/Remote/NZERO-1924702NOR" target="_blank" rel="noopener noreferrer">listing</a>). Expect travel across the Central region, and ask the recruiter whether Whanganui can be your base before applying.</p>
+<p><strong>Watch out for:</strong> regional travel, report-writing load, and public service salary bands rather than the teacher pay scale.</p>
+</div>
+</section>
+<section class="chapter" id="teacher-education" aria-labelledby="teacher-education-h" data-time="5:45 am" data-label="Lecturing">
+  <header class="chapter-head">
+    <span class="tile" style="--g:linear-gradient(140deg,#2d5fae,#5aa7f0)"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5-10-5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg></span>
+    <div><p class="time">5:45 am</p><h2 id="teacher-education-h">Option 2: Teacher education</h2></div>
+  </header>
+  <div class="panel">
+<p>Teacher education offers a ladder you can start on part-time: visiting lecturer first, then lecturer once a master's is under way. You'd be teaching adults, not children.</p>
+<ul>
+<li><strong>Visiting Lecturer / Practicum Assessor (NZTC, Whanganui):</strong> NZTC has advertised this hybrid contract role for Whanganui specifically (<a href="https://jobs.smartrecruiters.com/UpEducation/6000000000890047-visiting-lecturer" target="_blank" rel="noopener noreferrer">listing</a>). It asks for an ECE bachelor's degree or higher, a current practising certificate and 3–5 years' ECE experience (<a href="https://jobs.smartrecruiters.com/UpEducation/6000000001115396-visiting-lecturer-practicum-assessor" target="_blank" rel="noopener noreferrer">requirements</a>).</li>
+<li><strong>Lecturer (UCOL Whanganui):</strong> UCOL teaches its Bachelor of Teaching (ECE) and Level 5 diploma at the Whanganui campus on Rutland Street (<a href="https://www.ucol.ac.nz/programmes/education/te-tohu-paetahi-akoranga-bachelor-of-teaching-(early-childhood-education)" target="_blank" rel="noopener noreferrer">programme</a>, <a href="https://studyspy.ac.nz/courses/15180/new-zealand-diploma-in-early-childhood-education-and-care-level-5" target="_blank" rel="noopener noreferrer">diploma</a>). UCOL lecturer roles accept candidates working towards a master's (<a href="https://www.careerjet.co.nz/jobad/nzb121470aed5dd023a261e3d42e843f66" target="_blank" rel="noopener noreferrer">example listing</a>).</li>
+<li><strong>Blended teacher-education roles:</strong> some providers, such as Te Rito Maioha, deliver through blended learning and regional centres (<a href="https://www.ecnz.ac.nz/Public/Public/About-us/Opportunities/Opportunities.aspx" target="_blank" rel="noopener noreferrer">opportunities</a>); check each role's location.</li>
+</ul>
+<p><strong>How your current job relates:</strong> mentoring student and provisionally certificated teachers, appraisal against the Standards, and curriculum leadership.</p>
+<p><strong>From Whanganui:</strong> yes, through UCOL Whanganui and NZTC. University lecturing roles are city-based and would mean relocating.</p>
+</div>
+</section>
+<section class="chapter" id="pld" aria-labelledby="pld-h" data-time="6:00 am" data-label="PLD">
+  <header class="chapter-head">
+    <span class="tile" style="--g:linear-gradient(140deg,#a0476b,#f08a6a)"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15V6a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H8l-4 3z"/><path d="M20 9v8l-3-2h-5"/></svg></span>
+    <div><p class="time">6:00 am</p><h2 id="pld-h">Option 3: Professional learning and development</h2></div>
+  </header>
+  <div class="panel">
+<p>PLD facilitators coach teachers and leaders across many services, which suits someone who enjoys growing their team more than running a centre.</p>
+<p>Playcentre Aotearoa's facilitator role designs PLD programmes, runs face-to-face and online learning for adults, and helps deliver Ministry of Education contracts (<a href="https://www.playcentre.org.nz/wp-content/uploads/2023/03/PD-PLD-Facilitator.pdf" target="_blank" rel="noopener noreferrer">position description</a>). Edtech companies such as Storypark employ ECE-experienced PLD trainers (<a href="https://au.storypark.com/pld/pld-team" target="_blank" rel="noopener noreferrer">Storypark PLD team</a>).</p>
+<p><strong>Who employs PLD facilitators:</strong> kindergarten associations, Playcentre, large ECE providers' internal teams, private PLD companies with Ministry accreditation, and edtech providers.</p>
+<p><strong>How your current job relates:</strong> leading staff meetings and internal PLD, coaching conversations, and leading change in practice.</p>
+<p><strong>From Whanganui:</strong> possible. Playcentre employs regional facilitators for the Central North Island (<a href="https://www.playcentre.org.nz/learnwithus/meet-our-pld-team" target="_blank" rel="noopener noreferrer">team page</a>), and He Whānau Manaaki runs PLD across its kindergartens.</p>
+</div>
+</section>
+<section class="chapter" id="management" aria-labelledby="management-h" data-time="6:15 am" data-label="Management">
+  <header class="chapter-head">
+    <span class="tile" style="--g:linear-gradient(140deg,#3b7d5a,#7cc98e)"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V8l8-4 8 4v12M9 20v-5h6v5M3 20h18"/></svg></span>
+    <div><p class="time">6:15 am</p><h2 id="management-h">Option 4: Centre and area management</h2></div>
+  </header>
+  <div class="panel">
+<p>Area or regional manager roles are the natural next rung for someone who wants to stay in operations. Large providers such as <a href="https://www.evolveeducation.co.nz/join-our-team/job-search" target="_blank" rel="noopener noreferrer">Evolve Education</a>, BestStart and Busy Bees advertise centre, complex and area manager roles and run internal leadership programmes.</p>
+<p><strong>How your current job relates:</strong> budgets, occupancy, rosters, ratios, recruitment, licensing compliance and leading a team through ERO reviews.</p>
+<p><strong>From Whanganui:</strong> centre manager roles come up locally (<a href="https://www.jobleads.com/nz/job/centre-manager-ece--whanganui--e7f29756956563d55e961357d6101576f" target="_blank" rel="noopener noreferrer">Lots of Hugs Broadway listing</a>). Area roles usually cover several towns, so ask whether one covering Manawatū–Whanganui can be based in Whanganui. In smaller centres the manager often counts in ratios, so ask how much time is spent with children before accepting.</p>
+</div>
+</section>
+<section class="chapter" id="more-ece" aria-labelledby="more-ece-h" data-time="6:30 am" data-label="More ECE">
+  <header class="chapter-head">
+    <span class="tile" style="--g:linear-gradient(140deg,#7a4fb0,#e07ab0)"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><path d="M16.5 13v7M13 16.5h7"/></svg></span>
+    <div><p class="time">6:30 am</p><h2 id="more-ece-h">More options inside ECE</h2></div>
+  </header>
+  <div class="panel">
+<p><strong>Kindergarten association senior teacher or professional leader.</strong> He Whānau Manaaki Kindergarten Association has governed the Whanganui kindergartens since July 2019 (<a href="https://www.wmkindergartens.org.nz/assets/About-Us/Annual-Reports/201819-Annual-Report_82627_2.pdf" target="_blank" rel="noopener noreferrer">annual report</a>), and its senior teachers support local kindergartens with curriculum, learning and appraisals (<a href="https://www.nzherald.co.nz/whanganui-chronicle/news/heritage-month-has-kindergartens-of-old-in-whanau-manaaki-window/6ROZV3Y7SZJ2TGFBITBEXZGA4M" target="_blank" rel="noopener noreferrer">Whanganui Chronicle</a>). Watch its vacancies and the <a href="https://gazette.education.govt.nz/vacancies/1HAhW3-senior-teacher-0-60-position" target="_blank" rel="noopener noreferrer">Education Gazette</a>. Pay follows the <a href="https://www.education.govt.nz/school/people-and-employment/employment-agreements/collective-agreements/kindergarten-teachers-head-teachers-and-senior-teachers-collective-agreement/" target="_blank" rel="noopener noreferrer">kindergarten collective agreement</a>.</p>
+<p><strong>Home-based coordinator or visiting teacher.</strong> This option has the most Whanganui employers. A coordinator must be a qualified, registered ECE teacher and oversees up to 50 children across educators' homes (<a href="https://conversation.education.govt.nz/conversations/review-of-home-based-early-childhood-education/what-is-home-based-ece" target="_blank" rel="noopener noreferrer">Ministry of Education</a>). Local services include PAUA Early Childhood (<a href="https://ero.govt.nz/node/1890" target="_blank" rel="noopener noreferrer">ERO report</a>), Ignite Homebased ECE (<a href="https://ero.govt.nz/node/1182" target="_blank" rel="noopener noreferrer">ERO report</a>), Barnardos (<a href="https://www.nzherald.co.nz/whanganui-chronicle/news/barnardos-whanganui-still-offering-home-based-learning-despite-citys-office-closing/ESO7MRSWP3MWNBFBXKNW3JUJRM" target="_blank" rel="noopener noreferrer">Whanganui Chronicle</a>) and Tiny Nation Taranaki Whanganui (<a href="https://ero.govt.nz/node/2297" target="_blank" rel="noopener noreferrer">ERO report</a>).</p>
+<p><strong>Owning a service.</strong> Opening a centre or home-based service uses your operational knowledge but carries business risk and capital needs. Owners of small centres often end up covering ratios, so a home-based service (coordinating educators rather than teaching) or consultancy fits the goal of leaving teaching better. Licensing applications now go to ERO (<a href="https://www.ero.govt.nz/about-us/news/clearer-education-roles-and-responsibilities-for-ero-and-ministry" target="_blank" rel="noopener noreferrer">ERO</a>); the Ministry's guide to <a href="https://education.govt.nz/early-childhood/starting-a-service/starting-a-home-based-ece-service/recruitment-of-staff-and-educators-for-your-home-based-education-and-care-service/" target="_blank" rel="noopener noreferrer">starting a home-based service</a> covers staffing requirements.</p>
+<p><strong>Independent consultancy.</strong> Services adjusting to the new licensing criteria (in effect from 20 April 2026) and ERO's enforcement tools need help with compliance, internal evaluation and leadership coaching (<a href="https://www.scoop.co.nz/stories/PA2609/S00005.htm" target="_blank" rel="noopener noreferrer">timeline, Scoop</a>).</p>
+<p><strong>Edtech, curriculum resources and policy.</strong> ECE software companies hire trainers and customer educators, and some roles are fully remote (<a href="https://twinkl.tribepad.com/members/modules/job/detail.php?record=109" target="_blank" rel="noopener noreferrer">Twinkl listing</a>).</p>
+<p><strong>Mentor teacher (CV builder only).</strong> Formal mentoring of provisionally certificated teachers is usually done alongside a teaching role, so it doesn't get you out of teaching. Use it only as evidence of adult coaching while you apply for the roles above.</p>
+</div>
+</section>
+<section class="chapter" id="outside" aria-labelledby="outside-h" data-time="6:45 am" data-label="Outside ECE">
+  <header class="chapter-head">
+    <span class="tile" style="--g:linear-gradient(140deg,#b0592b,#f2b04a)"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M15.5 8.5l-2 5-5 2 2-5 5-2z"/></svg></span>
+    <div><p class="time">6:45 am</p><h2 id="outside-h">Out-of-industry options in Whanganui</h2></div>
+  </header>
+  <div class="panel">
+<p>Whanganui's government offices and social services hire for the skills head teachers use daily: judging needs, working with whānau, handling hard conversations and keeping records. Most pay $70,000–$85,000, about the same as head teacher pay, and train you on the job.</p>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Whanganui employer</th>
+<th>Pay (NZD per year)</th>
+<th>Why your experience fits</th>
+<th>Extra training needed</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Senior education adviser, curriculum adviser or integrated services manager</td>
+<td>Ministry of Education (Te Mahau), Whanganui office</td>
+<td>about $80,000–$100,000 (Northland listing for the same role)</td>
+<td>Advises early learning services and schools; you know the sector from the inside</td>
+<td>None; relevant tertiary qualification</td>
+<td><a href="https://ministrycareers.education.govt.nz/job/Whanganui-Manager%2C-Integrated-Services/1362979966/" target="_blank" rel="noopener noreferrer">Whanganui role</a>, <a href="https://www.jobleads.com/nz/job/senior-education-advisor--northland--efd553bd8ab616a02ddde0ab523bc605e" target="_blank" rel="noopener noreferrer">pay example</a></td>
+</tr>
+<tr>
+<td>Case manager (in person or phone-based)</td>
+<td>Ministry of Social Development (Work and Income), Whanganui office</td>
+<td>$69,519–$84,041</td>
+<td>Assessing needs, supporting whānau, high-trust decisions</td>
+<td>On-the-job training</td>
+<td><a href="https://jobs.msd.govt.nz/MSD/job/Whanganui-Case-Manager-%28Phone-Based%29-Whanganui/1364369266/" target="_blank" rel="noopener noreferrer">MSD listing</a></td>
+</tr>
+<tr>
+<td>Case manager or probation officer</td>
+<td>Ara Poutama (Department of Corrections), Whanganui Prison and community probation</td>
+<td>Case manager $70,956 (2025 listing)</td>
+<td>Planning, motivating change, working with whānau</td>
+<td>On-the-job training</td>
+<td><a href="https://www.careerjet.co.nz/jobad/nz9825c93ec444636a686e065e10ee79d3" target="_blank" rel="noopener noreferrer">Case manager</a>, <a href="https://mahi.corrections.govt.nz/jobs/apa-1929469" target="_blank" rel="noopener noreferrer">Probation officer</a></td>
+</tr>
+<tr>
+<td>Family Start or whānau worker</td>
+<td>Kaupapa Māori and community providers in Manawatū-Whanganui</td>
+<td>$59,000–$85,000 (listings elsewhere)</td>
+<td>Home visits supporting parents of children under five</td>
+<td>Some roles require a social services degree</td>
+<td><a href="https://mahi.co.nz/current-vacancies/view/23386" target="_blank" rel="noopener noreferrer">Raukawa Whānau Ora</a>, <a href="https://grabjobs.co/nz/job/full-time/others/whanau-kaitiaki-family-start-161279010" target="_blank" rel="noopener noreferrer">pay example</a></td>
+</tr>
+<tr>
+<td>Family/whānau visit supervisor</td>
+<td>Open Home Foundation, Whanganui</td>
+<td>Casual; not published</td>
+<td>Supervising family contact visits; child safety judgement</td>
+<td>None stated</td>
+<td><a href="https://jobs.y-axis.com/jobs/family-whanau-visit-supervisor-whanganui-open-home-foundation" target="_blank" rel="noopener noreferrer">Listing</a></td>
+</tr>
+<tr>
+<td>Policy or community adviser</td>
+<td>Whanganui District Council</td>
+<td>Senior policy adviser about $80,000–$95,000 (earlier listing)</td>
+<td>Writing, community relationships, evaluating what works</td>
+<td>Policy roles prefer a tertiary qualification</td>
+<td><a href="https://www.whanganui.govt.nz/Your-Council/Working-for-Us/Vacancies" target="_blank" rel="noopener noreferrer">Council vacancies</a>, <a href="https://applynow.net.au/jobs/110674-senior-policy-advisor" target="_blank" rel="noopener noreferrer">pay example</a></td>
+</tr>
+<tr>
+<td>Whānau Ora navigator or kaimahi</td>
+<td>Te Oranganui, the Whanganui iwi health and social services provider</td>
+<td>$77,900–$85,000 (Wellington navigator listing)</td>
+<td>Walking alongside whānau to reach their goals</td>
+<td>Te reo and tikanga skills valued</td>
+<td><a href="https://mahi.co.nz/current-vacancies/view/21384" target="_blank" rel="noopener noreferrer">Te Oranganui</a>, <a href="https://nz.seek.com/Te-Wharewaka-o-Poneke-jobs" target="_blank" rel="noopener noreferrer">pay example</a></td>
+</tr>
+<tr>
+<td>Regional adviser roles</td>
+<td>Te Puni Kōkiri, Whanganui office</td>
+<td>Not published</td>
+<td>Relationship and community work across Te Tai Hauāuru</td>
+<td>Varies by role</td>
+<td><a href="https://tpk.govt.nz/mo-te-puni-kokiri/our-stories-and-media/bends-of-the-awa-bring-regional-manager-nancy-tuai" target="_blank" rel="noopener noreferrer">Te Puni Kōkiri</a></td>
+</tr>
+<tr>
+<td>Health service coordination and Māori health roles</td>
+<td>Te Whatu Ora Whanganui (Whanganui Hospital)</td>
+<td>Not published</td>
+<td>Coordination and whānau-centred support</td>
+<td>Clinical roles need health qualifications</td>
+<td><a href="https://jobs.govt.nz/jobs/Manawatu-Whanganui/1903445" target="_blank" rel="noopener noreferrer">Example listing</a></td>
+</tr>
+<tr>
+<td>Social worker (longer path)</td>
+<td>Oranga Tamariki, Whanganui site</td>
+<td>$81,206–$97,557</td>
+<td>Highest-paying route outside education</td>
+<td>Social work qualification and SWRB registration first</td>
+<td><a href="https://jobs.govt.nz/jobs/41114" target="_blank" rel="noopener noreferrer">Listing</a></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>How to pick:</strong> the Ministry of Education pays best and fits most closely, but is still education. MSD and Corrections are the cleanest break from the sector with steady public service pay. Family Start keeps you working with families of young children without teaching them. Oranga Tamariki also hires casual resource workers in Whanganui at $26 an hour (<a href="https://nz.karier.co/amp/resource-worker-whanganui-at-new-zealand-government-32bab531" target="_blank" rel="noopener noreferrer">listing</a>), a way to try the work before committing to retraining.</p>
+<p><strong>Watch out for:</strong> shift work in prison-based roles, high caseloads in MSD and Family Start roles, and roles titled "social worker", which need registration with the Social Workers Registration Board.</p>
+</div>
+</section>
+<section class="chapter" id="stories" aria-labelledby="stories-h" data-time="7:00 am" data-label="Stories">
+  <header class="chapter-head">
+    <span class="tile" style="--g:linear-gradient(140deg,#2f8a6a,#a8de6a)"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-8M12 13c0-4 3-7 7-7 0 4-3 7-7 7zM12 15c0-3-2.5-5.5-6-5.5 0 3 2.5 5.5 6 5.5z"/></svg></span>
+    <div><p class="time">7:00 am</p><h2 id="stories-h">Teachers who started businesses</h2></div>
+  </header>
+  <div class="panel">
+<p>The best example is in Whanganui itself: a qualified ECE teacher built a home-based service with hundreds of educators from a Whanganui head office.</p>
+<p><strong>Raewyn Overton-Stuart, PAUA Early Childhood (Whanganui).</strong> A qualified ECE teacher, she was working in another home-based service when she decided to start her own, run with her husband from a Whanganui headquarters. By 2012 PAUA had 43 staff, 31 visiting teachers and about 300 educators caring for roughly 700 children, mostly in rural central North Island areas where flexible hours suited farming families. The couple said Whanganui worked because housing was cheaper, the location was central and internet was good. (<a href="https://www.nzherald.co.nz/whanganui-chronicle/business/pre-school-venture-finds-niche-market/2TL6MKPD4KTKIBD3ECI7DSJY54" target="_blank" rel="noopener noreferrer">Whanganui Chronicle, 2012</a>; <a href="https://consumer-portal.yellow.co.nz/y/paua-early-childhood-tauranga" target="_blank" rel="noopener noreferrer">PAUA listing</a>; <a href="https://ero.govt.nz/node/1890" target="_blank" rel="noopener noreferrer">ERO report</a>)</p>
+<p><strong>Michelle Dickie, children's furniture (Christchurch).</strong> A former preschool teacher, she started a business by accident after her husband built a toy box for her centre. The couple learned as they went, sold through Facebook and word of mouth, and she left teaching to make learning towers, climbing frames, water tables and mud kitchens full-time. (<a href="https://www.stuff.co.nz/business/small-business/123161809/building-kids-toys-turned-from-hobby-into-thriving-business-for-christchurch-couple" target="_blank" rel="noopener noreferrer">Stuff</a>)</p>
+<p><strong>Chantelle Jacobs, Miss Jacobs Little Learners (Melbourne).</strong> A former teacher, she built a seven-figure business selling low-cost classroom resources to other teachers, starting from a blog and Facebook page in 2012. She tackled her lack of business background with short courses, podcasts and a business coach. (<a href="https://nz.news.yahoo.com/former-teacher-creates-7-figure-171400089.html" target="_blank" rel="noopener noreferrer">Yahoo News NZ</a>)</p>
+<p><strong>Lisa Vodola, Preschool Readers (United States).</strong> After nine years as a kindergarten teacher, she built her early-reading business on the side while still teaching, then turned her programme into a training course for other teachers. (<a href="https://simplystatedmedia.com/entrepreneur-lisa-vodola/" target="_blank" rel="noopener noreferrer">Simply Stated Media</a>)</p>
+<p><strong>Lessons</strong></p>
+<ul>
+<li><strong>Whanganui is not a barrier.</strong> PAUA grew from Whanganui to networks in Christchurch and Auckland.</li>
+<li><strong>Start on the side.</strong> Three of the four tested their idea before leaving their job.</li>
+<li><strong>Sell to adults, not children.</strong> Resources, furniture, training and coordinating educators all use ECE knowledge without daily teaching.</li>
+<li><strong>Get business help early.</strong> Ministry-funded services carry strict financial obligations; one Hamilton home-based operator lost her registration after company tax debts (<a href="https://www.nzherald.co.nz/nz/childcare-owner-holidayed-overseas-while-tax-debt-mounted-over-250000/RNUTSX7TJFT5COZO6SV6UGR2EA/" target="_blank" rel="noopener noreferrer">NZ Herald</a>). An accountant and a business mentor are worth the cost from day one.</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="compare" aria-labelledby="compare-h" data-time="7:15 am" data-label="Compare">
+  <header class="chapter-head">
+    <span class="tile" style="--g:linear-gradient(140deg,#3c5ab0,#8fb4ff)"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20V10M12 20V4M19 20v-7"/></svg></span>
+    <div><p class="time">7:15 am</p><h2 id="compare-h">Options compared</h2></div>
+  </header>
+  <div class="panel">
+<p>Six ECE options can be based in Whanganui outright, none involves day-to-day teaching of children, and most need no new qualification; only lecturing needs a master's.</p>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Based in Whanganui?</th>
+<th>Direct teaching of children</th>
+<th>Extra qualification needed</th>
+<th>Try it part-time first?</th>
+<th>Best fit if you enjoy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kindergarten senior teacher</td>
+<td><span class="tag tag-yes">Yes</span></td>
+<td>None; non-contact leadership</td>
+<td>None stated; senior leadership record</td>
+<td>Yes; 0.6 FTE roles exist</td>
+<td>Coaching head teachers</td>
+</tr>
+<tr>
+<td>Visiting lecturer / practicum assessor</td>
+<td><span class="tag tag-yes">Yes</span></td>
+<td>None; assesses student teachers</td>
+<td>None (bachelor's and practising certificate)</td>
+<td>Yes; contract work</td>
+<td>Mentoring student teachers</td>
+</tr>
+<tr>
+<td>Lecturer at UCOL Whanganui</td>
+<td><span class="tag tag-yes">Yes</span></td>
+<td>None; teaches adults</td>
+<td>Master's, or working towards one</td>
+<td>Via visiting lecturer work</td>
+<td>Teaching adults</td>
+</tr>
+<tr>
+<td>Consultant</td>
+<td><span class="tag tag-yes">Yes</span></td>
+<td>None</td>
+<td>None formal; business skills</td>
+<td>Yes; alongside current work</td>
+<td>Independence</td>
+</tr>
+<tr>
+<td>Home-based coordinator</td>
+<td><span class="tag tag-yes">Yes</span></td>
+<td>Little; children present on home visits</td>
+<td>None (registered ECE teacher)</td>
+<td>Yes; from 10 hours a week</td>
+<td>Autonomy, small-group mentoring</td>
+</tr>
+<tr>
+<td>Centre manager (non-teaching)</td>
+<td><span class="tag tag-yes">Yes</span></td>
+<td>None if office-based; some include ratio cover</td>
+<td>None</td>
+<td><span class="tag tag-no">No</span></td>
+<td>Operations, people, budgets</td>
+</tr>
+<tr>
+<td>ERO review officer or regulatory role</td>
+<td><span class="tag tag-maybe">Likely, with travel</span></td>
+<td>None</td>
+<td>None stated beyond ECE experience</td>
+<td>No; usually full-time</td>
+<td>Evaluation, compliance, writing</td>
+</tr>
+<tr>
+<td>Area manager</td>
+<td><span class="tag tag-maybe">Possibly</span></td>
+<td>None</td>
+<td>None</td>
+<td><span class="tag tag-no">No</span></td>
+<td>Operations across centres</td>
+</tr>
+<tr>
+<td>PLD facilitator</td>
+<td><span class="tag tag-maybe">Possibly</span></td>
+<td>None; works with adults</td>
+<td>None stated</td>
+<td>Sometimes; contract work</td>
+<td>Coaching teachers</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</section>
+<section class="chapter" id="pay" aria-labelledby="pay-h" data-time="7:30 am" data-label="Pay">
+  <header class="chapter-head">
+    <span class="tile" style="--g:linear-gradient(140deg,#b07a1f,#f6d35a)"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M14.5 9.2c-.5-.8-1.4-1.2-2.5-1.2-1.4 0-2.5.8-2.5 2 0 2.7 5 1.4 5 4 0 1.2-1.1 2-2.5 2-1.2 0-2.1-.5-2.6-1.3M12 6.5V8M12 16v1.5"/></svg></span>
+    <div><p class="time">7:30 am</p><h2 id="pay-h">Potential pay</h2></div>
+  </header>
+  <div class="panel">
+<p>Of the roles you can hold from Whanganui, ERO and kindergarten senior teacher roles pay the most, at roughly $100,000–$115,000, against a typical head teacher range of $70,000–$85,000. Figures are from advertised roles and published agreements, mostly full-time, excluding KiwiSaver or superannuation unless stated.</p>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Based in Whanganui?</th>
+<th>Pay (NZD per year)</th>
+<th>Basis</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ERO manager, review and improvement services</td>
+<td><span class="tag tag-maybe">Unconfirmed</span></td>
+<td>$129,000–$135,000 + super</td>
+<td>ERO listing, 2026</td>
+<td><a href="https://jobs.govt.nz/jobs/Auckland/NZERO-1926749" target="_blank" rel="noopener noreferrer">Listing</a></td>
+</tr>
+<tr>
+<td>Kindergarten senior manager (K4)</td>
+<td><span class="tag tag-yes">Yes</span></td>
+<td>$115,123</td>
+<td>Rate from 1 Dec 2023</td>
+<td><a href="https://oece.nz/?p=7304" target="_blank" rel="noopener noreferrer">OECE</a></td>
+</tr>
+<tr>
+<td>Kindergarten senior teacher (K3)</td>
+<td><span class="tag tag-yes">Yes</span></td>
+<td>$106,427</td>
+<td>Rate from 1 Dec 2023; varied since, new agreement from 29 June 2026</td>
+<td><a href="https://oece.nz/?p=7304" target="_blank" rel="noopener noreferrer">OECE</a>, <a href="https://www.nzeiteriuroa.org.nz/assets/downloads/Kindergarten-Teachers-Collective-Agreement-2026-2028-ratified-unsigned.pdf" target="_blank" rel="noopener noreferrer">2026–2028 agreement</a></td>
+</tr>
+<tr>
+<td>ERO review officer</td>
+<td><span class="tag tag-maybe">Likely, with travel</span></td>
+<td>$102,443–$107,005 + super</td>
+<td>Starting range, April 2026</td>
+<td><a href="https://jobs.govt.nz/jobs/Hamilton/NZERO-1920464HAM" target="_blank" rel="noopener noreferrer">Listing</a></td>
+</tr>
+<tr>
+<td>Ministry of Education senior adviser</td>
+<td><span class="tag tag-yes">Yes</span></td>
+<td>about $80,000–$100,000</td>
+<td>Northland listing</td>
+<td><a href="https://www.jobleads.com/nz/job/senior-education-advisor--northland--efd553bd8ab616a02ddde0ab523bc605e" target="_blank" rel="noopener noreferrer">Listing</a></td>
+</tr>
+<tr>
+<td>Centre manager</td>
+<td><span class="tag tag-yes">Yes</span></td>
+<td>about $93,000–$98,000</td>
+<td>Average across Trade Me listings, national</td>
+<td><a href="https://www.trademe.co.nz/jobs/education/early-childhood" target="_blank" rel="noopener noreferrer">Trade Me Jobs</a></td>
+</tr>
+<tr>
+<td>MSD case manager</td>
+<td><span class="tag tag-yes">Yes</span></td>
+<td>$69,519–$84,041</td>
+<td>Whanganui listing, 2026</td>
+<td><a href="https://jobs.msd.govt.nz/MSD/job/Whanganui-Case-Manager-%28Phone-Based%29-Whanganui/1364369266/" target="_blank" rel="noopener noreferrer">Listing</a></td>
+</tr>
+<tr>
+<td>Home-based visiting teacher / coordinator</td>
+<td><span class="tag tag-yes">Yes</span></td>
+<td>$60,000–$80,000</td>
+<td>Full-time Waikato listing; part-time pro rata</td>
+<td><a href="https://www.jobleads.com/nz/job/visiting-teacher--waikato--e7cec3d888c413ce528ba40a4da51fd6a" target="_blank" rel="noopener noreferrer">Listing</a></td>
+</tr>
+<tr>
+<td>Head teacher (your benchmark)</td>
+<td><span class="tag tag-yes">Yes</span></td>
+<td>$70,000–$85,000</td>
+<td>Market summary; full pay parity top step $96,820</td>
+<td><a href="https://employmentforimmigration.nz/ece-teacher-roles-in-new-zealand/" target="_blank" rel="noopener noreferrer">Summary</a>, <a href="https://bulletins.education.govt.nz/node/814" target="_blank" rel="noopener noreferrer">Ministry bulletin</a></td>
+</tr>
+<tr>
+<td>University lecturer (reference only)</td>
+<td><span class="tag tag-no">No</span></td>
+<td>$98,000–$143,000</td>
+<td>University of Auckland listing, 2025</td>
+<td><a href="https://jobr.pro/job/29825761/lecturer-senior-lecturer-in-early-childhood" target="_blank" rel="noopener noreferrer">Listing</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>No published figures turned up for UCOL lecturers, area managers, PLD facilitators or visiting lecturer contracts; ask recruiters directly.</p>
+</div>
+</section>
+<section class="chapter" id="strengths" aria-labelledby="strengths-h" data-time="7:45 am" data-label="Strengths">
+  <header class="chapter-head">
+    <span class="tile" style="--g:linear-gradient(140deg,#c0503a,#f7a35c)"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.8z"/></svg></span>
+    <div><p class="time">7:45 am</p><h2 id="strengths-h">What you already bring</h2></div>
+  </header>
+  <div class="panel">
+<p>Everyday head teacher work maps directly onto these roles. Use the middle column's wording in CVs and cover letters.</p>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Current responsibility</th>
+<th>How to describe it to an employer</th>
+<th>Roles it supports</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Leading the teaching team, appraisal and professional growth cycles</td>
+<td>Coaching adults, giving evidence-based feedback, building teacher capability</td>
+<td>PLD facilitator, visiting lecturer, kindergarten senior teacher</td>
+</tr>
+<tr>
+<td>Mentoring provisionally certificated and student teachers</td>
+<td>Supporting kaiako to meet the Standards for the Teaching Profession</td>
+<td>Visiting lecturer, lecturer, practicum coordinator</td>
+</tr>
+<tr>
+<td>Internal evaluation and self-review</td>
+<td>Evaluative thinking, gathering and judging evidence, writing improvement plans</td>
+<td>ERO review officer, consultant, Ministry adviser</td>
+</tr>
+<tr>
+<td>Licensing criteria, health and safety, compliance checks</td>
+<td>Working knowledge of the ECE regulations and licensing criteria</td>
+<td>ERO regulatory roles, area manager, consultant, owner</td>
+</tr>
+<tr>
+<td>Planning and assessment using Te Whāriki</td>
+<td>Curriculum leadership and assessment for learning</td>
+<td>Lecturer, PLD facilitator, ERO, Ministry curriculum adviser</td>
+</tr>
+<tr>
+<td>Bicultural practice and commitment to Te Tiriti o Waitangi</td>
+<td>Leading culturally responsive practice</td>
+<td>Every role here; a stated requirement in most listings</td>
+</tr>
+<tr>
+<td>Rosters, ratios, budgets, enrolments, occupancy</td>
+<td>Operational and financial management</td>
+<td>Area manager, home-based coordinator, owner</td>
+</tr>
+<tr>
+<td>Partnerships with whānau, schools and agencies</td>
+<td>Relationship management and stakeholder engagement</td>
+<td>ERO, Ministry, MSD, Whānau Ora, consultant</td>
+</tr>
+<tr>
+<td>Handling complaints, incidents and difficult conversations</td>
+<td>Professional judgement, conflict resolution, child protection practice</td>
+<td>ERO regulatory roles, case management, Family Start</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</section>
+<section class="chapter" id="study" aria-labelledby="study-h" data-time="8:00 am" data-label="Study">
+  <header class="chapter-head">
+    <span class="tile" style="--g:linear-gradient(140deg,#2c6da0,#6fd0e6)"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5zM4 20.5A2.5 2.5 0 0 0 6.5 23H20"/></svg></span>
+    <div><p class="time">8:00 am</p><h2 id="study-h">Part-time master's programmes</h2></div>
+  </header>
+  <div class="panel">
+<p>All four can be studied part-time from Whanganui for roughly $11,000–$15,000 in domestic tuition. Massey and NZTC are the most practical fits: Massey is fully distance and an hour away in Palmerston North, and NZTC is the only ECE-specific option.</p>
+<div class="table-wrap" tabindex="0"><table>
+<thead>
+<tr>
+<th>Programme</th>
+<th>Part-time length</th>
+<th>Delivery</th>
+<th>Domestic tuition</th>
+<th>Entry (summary)</th>
+<th>Best for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.massey.ac.nz/study/all-qualifications-and-degrees/master-of-education-PMEDC/educational-administration-and-leadership-PMEDC2SEDAL1/" target="_blank" rel="noopener noreferrer">Massey — Master of Education (Educational Administration and Leadership)</a></td>
+<td>About 2 years or longer, at your pace</td>
+<td>Distance and online</td>
+<td>$11,291 per 120 credits (2027 estimate), plus $984 student services fee</td>
+<td>Bachelor's with a B average plus teaching qualification or relevant experience</td>
+<td>ERO, management, senior teacher roles</td>
+</tr>
+<tr>
+<td><a href="https://online.auckland.ac.nz/?p=52933" target="_blank" rel="noopener noreferrer">University of Auckland — Master of Educational Leadership (online)</a></td>
+<td>2 years, one 12-week course at a time</td>
+<td>Fully online</td>
+<td>About $9,575 per 120 points (2026), roughly $14,000 for 180 points</td>
+<td>Three years' relevant experience; GPA 5.0 for direct entry</td>
+<td>Leadership and mentoring</td>
+</tr>
+<tr>
+<td><a href="https://www.topuniversities.com/node/3164614" target="_blank" rel="noopener noreferrer">University of Waikato — Master of Educational Leadership</a></td>
+<td>Flexible, part-time while you work</td>
+<td>Online with some block courses</td>
+<td>$13,644 total (<a href="https://knowyourcv.careers.govt.nz/qualifications/view/WI0806/7002" target="_blank" rel="noopener noreferrer">careers.govt.nz</a>)</td>
+<td>Relevant degree plus substantial experience</td>
+<td>Leadership research and change</td>
+</tr>
+<tr>
+<td><a href="https://nztertiarycollege.ac.nz/early-childhood-education/postgraduate-qualifications/master-early-childhood-education" target="_blank" rel="noopener noreferrer">NZTC — Master of Early Childhood Education</a></td>
+<td>Part-time available (1.5 years full-time)</td>
+<td>Online</td>
+<td>$14,382 tuition (2027)</td>
+<td>Level 7 bachelor's, postgraduate diploma or master's</td>
+<td>ECE-specific leadership and management</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Check your existing qualification.</strong> Every programme expects a Level 7 bachelor's degree or equivalent. If you hold an older Diploma of Teaching (ECE), ask about entry routes such as a postgraduate certificate first.</li>
+<li><strong>Cheaper ways in.</strong> Auckland sells single online courses for $2,130.60 each that can be credited to the master's (<a href="https://www.online.auckland.ac.nz/?p=42058" target="_blank" rel="noopener noreferrer">Auckland Online</a>). NZTC's <a href="https://www.nztertiarycollege.ac.nz/early-childhood-education/postgraduate-qualifications/postgraduate-certificate-education-leadership-and-management" target="_blank" rel="noopener noreferrer">Postgraduate Certificate in Education (Leadership and Management)</a> is a 60-credit stepping stone.</li>
+<li><strong>Funding.</strong> Domestic students may be eligible for a StudyLink loan; ask employers about study support.</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="next" aria-labelledby="next-h" data-time="8:15 am" data-label="Next steps">
+  <header class="chapter-head">
+    <span class="tile" style="--g:linear-gradient(140deg,#d06a2a,#ffc36a)"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h12M13 6l6 6-6 6"/></svg></span>
+    <div><p class="time">8:15 am</p><h2 id="next-h">Next steps</h2></div>
+  </header>
+  <div class="panel">
+<p>Start with low-risk moves that build a track record, and decide on a master's within the next year.</p>
+<ol>
+<li>Decide which non-teaching part of your job is most energising: leading people, coaching adults, or systems and compliance.</li>
+<li>Set job alerts on <a href="https://jobs.govt.nz/jobs/Hamilton/NZERO-1911241" target="_blank" rel="noopener noreferrer">jobs.govt.nz</a>, <a href="https://careers.ero.govt.nz/jobs/Napier/NZERO-1859142N" target="_blank" rel="noopener noreferrer">careers.ero.govt.nz</a>, the <a href="https://gazette.education.govt.nz/vacancies/1HAhW3-senior-teacher-0-60-position" target="_blank" rel="noopener noreferrer">Education Gazette</a> and <a href="https://jobs.msd.govt.nz/MSD/job/Whanganui-Case-Manager-%28Phone-Based%29-Whanganui/1364369266/" target="_blank" rel="noopener noreferrer">MSD careers</a>.</li>
+<li>Apply for a visiting lecturer contract with NZTC to build adult-education experience.</li>
+<li>Rewrite your CV using the wording in <a href="#strengths">What you already bring</a>.</li>
+<li>Ask a senior teacher, ERO review officer, MSD case manager or lecturer for a 30-minute chat about their job.</li>
+<li>Compare the <a href="#study">part-time master's programmes</a> and choose one to start.</li>
+<li>Keep your practising certificate current; most options here require it or value it.</li>
+</ol>
+<p>In every interview, ask how much of the role involves ratio cover or time teaching children.</p>
+</div>
+</section>
+<section class="chapter" id="references" aria-labelledby="references-h" data-time="8:30 am" data-label="Sources">
+  <header class="chapter-head">
+    <span class="tile" style="--g:linear-gradient(140deg,#4a5a8a,#9fb0d8)"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></span>
+    <div><p class="time">8:30 am</p><h2 id="references-h">References</h2></div>
+  </header>
+  <div class="panel">
+<p>Job listings change often; check closing dates and current details before relying on any vacancy or fee.</p>
+<p><strong>Sector changes</strong></p>
+<ul>
+<li>ERO — <a href="https://www.ero.govt.nz/early-learning/understanding-our-regulatory-role-in-ece-and-kohungahunga/learn-about-the-transfer-of-regulations-to-ero" target="_blank" rel="noopener noreferrer">Learn about the transfer of regulations to ERO</a></li>
+<li>ERO — <a href="https://www.ero.govt.nz/about-us/news/clearer-education-roles-and-responsibilities-for-ero-and-ministry" target="_blank" rel="noopener noreferrer">Clearer education roles and responsibilities for ERO and Ministry</a></li>
+<li>ERO — <a href="https://www.ero.govt.nz/early-learning/understanding-our-regulatory-role-in-ece-and-kohungahunga/learn-about-the-director-of-regulation" target="_blank" rel="noopener noreferrer">Learn about the Director of Regulation</a></li>
+<li>Scoop — <a href="https://www.scoop.co.nz/stories/PA2609/S00005.htm" target="_blank" rel="noopener noreferrer">Minister sets clear expectations for new ECE regulator</a></li>
+</ul>
+<p><strong>ERO roles</strong></p>
+<ul>
+<li>ERO — <a href="https://careers.ero.govt.nz/jobs/Napier/NZERO-1859142N" target="_blank" rel="noopener noreferrer">Review Officer (ECE), Napier</a></li>
+<li>jobs.govt.nz — <a href="https://jobs.govt.nz/jobs/Hamilton/NZERO-1911241" target="_blank" rel="noopener noreferrer">Review Officer, Hamilton</a></li>
+<li>jobs.govt.nz — <a href="https://jobs.govt.nz/jobs/Hamilton/NZERO-1920464HAM" target="_blank" rel="noopener noreferrer">Kaiarotake / Review Officer, salary range</a></li>
+<li>jobs.govt.nz — <a href="https://jobs.govt.nz/jobs/Auckland/NZERO-1926749" target="_blank" rel="noopener noreferrer">Manager Review and Improvement Services</a></li>
+<li>jobs.govt.nz — <a href="https://jobs.govt.nz/jobs/Remote/NZERO-1924702NOR" target="_blank" rel="noopener noreferrer">ERO role listed as remote</a></li>
+<li>ERO — <a href="https://ero.govt.nz/sites/default/files/media-documents/2021-04/OIA-Working-from-home-June-2021.pdf" target="_blank" rel="noopener noreferrer">OIA response listing regional offices including Whanganui (2021)</a></li>
+</ul>
+<p><strong>Teacher education</strong></p>
+<ul>
+<li>NZTC — <a href="https://jobs.smartrecruiters.com/UpEducation/6000000000890047-visiting-lecturer" target="_blank" rel="noopener noreferrer">Visiting Lecturer, Whanganui</a></li>
+<li>NZTC — <a href="https://jobs.smartrecruiters.com/UpEducation/6000000001115396-visiting-lecturer-practicum-assessor" target="_blank" rel="noopener noreferrer">Visiting Lecturer / Practicum Assessor requirements</a></li>
+<li>UCOL — <a href="https://www.ucol.ac.nz/programmes/education/te-tohu-paetahi-akoranga-bachelor-of-teaching-(early-childhood-education)" target="_blank" rel="noopener noreferrer">Bachelor of Teaching (ECE)</a></li>
+<li>StudySpy — <a href="https://studyspy.ac.nz/courses/15180/new-zealand-diploma-in-early-childhood-education-and-care-level-5" target="_blank" rel="noopener noreferrer">UCOL NZ Diploma in ECE (Level 5)</a></li>
+<li>Careerjet — <a href="https://www.careerjet.co.nz/jobad/nzb121470aed5dd023a261e3d42e843f66" target="_blank" rel="noopener noreferrer">UCOL Lecturer, Bachelor of Teaching (ECE)</a></li>
+<li>Te Rito Maioha ECNZ — <a href="https://www.ecnz.ac.nz/Public/Public/About-us/Opportunities/Opportunities.aspx" target="_blank" rel="noopener noreferrer">Opportunities</a></li>
+<li>University of Auckland — <a href="https://jobr.pro/job/29825761/lecturer-senior-lecturer-in-early-childhood" target="_blank" rel="noopener noreferrer">Lecturer / Senior Lecturer in Early Childhood</a></li>
+</ul>
+<p><strong>Kindergarten, PLD and home-based roles</strong></p>
+<ul>
+<li>He Whānau Manaaki — <a href="https://www.wmkindergartens.org.nz/assets/About-Us/Annual-Reports/201819-Annual-Report_82627_2.pdf" target="_blank" rel="noopener noreferrer">2018/19 annual report (Whanganui merger)</a></li>
+<li>Whanganui Chronicle — <a href="https://www.nzherald.co.nz/whanganui-chronicle/news/heritage-month-has-kindergartens-of-old-in-whanau-manaaki-window/6ROZV3Y7SZJ2TGFBITBEXZGA4M" target="_blank" rel="noopener noreferrer">Senior teachers at Whānau Manaaki</a></li>
+<li>Education Gazette — <a href="https://gazette.education.govt.nz/vacancies/1HAhW3-senior-teacher-0-60-position" target="_blank" rel="noopener noreferrer">Senior Teacher 0.6 FTE example</a></li>
+<li>Playcentre Aotearoa — <a href="https://www.playcentre.org.nz/learnwithus/meet-our-pld-team" target="_blank" rel="noopener noreferrer">PLD team</a> and <a href="https://www.playcentre.org.nz/wp-content/uploads/2023/03/PD-PLD-Facilitator.pdf" target="_blank" rel="noopener noreferrer">PLD Facilitator position description</a></li>
+<li>Storypark — <a href="https://au.storypark.com/pld/pld-team" target="_blank" rel="noopener noreferrer">PLD team</a></li>
+<li>Ministry of Education — <a href="https://conversation.education.govt.nz/conversations/review-of-home-based-early-childhood-education/what-is-home-based-ece" target="_blank" rel="noopener noreferrer">What is home-based ECE</a></li>
+<li>ERO — <a href="https://ero.govt.nz/node/1890" target="_blank" rel="noopener noreferrer">PAUA Early Childhood 1, Whanganui</a>, <a href="https://ero.govt.nz/node/1182" target="_blank" rel="noopener noreferrer">Ignite Homebased ECE</a>, <a href="https://ero.govt.nz/node/2297" target="_blank" rel="noopener noreferrer">Tiny Nation Taranaki Whanganui</a></li>
+<li>Whanganui Chronicle — <a href="https://www.nzherald.co.nz/whanganui-chronicle/news/barnardos-whanganui-still-offering-home-based-learning-despite-citys-office-closing/ESO7MRSWP3MWNBFBXKNW3JUJRM" target="_blank" rel="noopener noreferrer">Barnardos home-based learning in Whanganui</a></li>
+<li>Whanganui Chronicle — <a href="https://www.nzherald.co.nz/whanganui-chronicle/news/ucol-whanganui-wins-contract-to-teach-home-based-early-childhood-educators/YBLZVQMP4AMXZUSLOZEKK4VVHQ" target="_blank" rel="noopener noreferrer">UCOL trains home-based educators</a></li>
+</ul>
+<p><strong>Management, consultancy and edtech</strong></p>
+<ul>
+<li>Jobleads — <a href="https://www.jobleads.com/nz/job/centre-manager-ece--whanganui--e7f29756956563d55e961357d6101576f" target="_blank" rel="noopener noreferrer">Centre Manager, Lots of Hugs Broadway, Whanganui</a></li>
+<li>Evolve Education — <a href="https://www.evolveeducation.co.nz/join-our-team/job-search" target="_blank" rel="noopener noreferrer">Job search</a></li>
+<li>Ministry of Education — <a href="https://education.govt.nz/early-childhood/starting-a-service/starting-a-home-based-ece-service/recruitment-of-staff-and-educators-for-your-home-based-education-and-care-service/" target="_blank" rel="noopener noreferrer">Starting a home-based service</a></li>
+<li>Twinkl — <a href="https://twinkl.tribepad.com/members/modules/job/detail.php?record=109" target="_blank" rel="noopener noreferrer">ECE segment role, remote NZ</a></li>
+</ul>
+<p><strong>Pay and agreements</strong></p>
+<ul>
+<li>OECE — <a href="https://oece.nz/?p=7304" target="_blank" rel="noopener noreferrer">Kindergarten and senior teacher pay rates</a></li>
+<li>NZEI Te Riu Roa — <a href="https://www.nzeiteriuroa.org.nz/assets/downloads/Kindergarten-Teachers-Collective-Agreement-2026-2028-ratified-unsigned.pdf" target="_blank" rel="noopener noreferrer">Kindergarten Teachers' Collective Agreement 2026–2028</a></li>
+<li>Ministry of Education — <a href="https://www.education.govt.nz/school/people-and-employment/employment-agreements/collective-agreements/kindergarten-teachers-head-teachers-and-senior-teachers-collective-agreement/" target="_blank" rel="noopener noreferrer">Kindergarten Teachers, Head Teachers and Senior Teachers' Collective Agreement</a></li>
+<li>Ministry of Education — <a href="https://bulletins.education.govt.nz/node/814" target="_blank" rel="noopener noreferrer">Full pay parity step 11 correction</a></li>
+<li>Trade Me Jobs — <a href="https://www.trademe.co.nz/jobs/education/early-childhood" target="_blank" rel="noopener noreferrer">Early childhood salaries</a></li>
+<li>Employment for Immigration — <a href="https://employmentforimmigration.nz/ece-teacher-roles-in-new-zealand/" target="_blank" rel="noopener noreferrer">ECE teacher pay overview</a></li>
+<li>Jobleads — <a href="https://www.jobleads.com/nz/job/visiting-teacher--waikato--e7cec3d888c413ce528ba40a4da51fd6a" target="_blank" rel="noopener noreferrer">Home-based visiting teacher pay, Waikato</a></li>
+</ul>
+<p><strong>Master's programmes</strong></p>
+<ul>
+<li>Massey University — <a href="https://www.massey.ac.nz/study/all-qualifications-and-degrees/master-of-education-PMEDC/educational-administration-and-leadership-PMEDC2SEDAL1/" target="_blank" rel="noopener noreferrer">Master of Education (Educational Administration and Leadership)</a></li>
+<li>University of Auckland — <a href="https://online.auckland.ac.nz/?p=52933" target="_blank" rel="noopener noreferrer">Online Master of Educational Leadership</a>, <a href="https://www.online.auckland.ac.nz/?p=42058" target="_blank" rel="noopener noreferrer">single online courses</a>, <a href="https://studyspy.ac.nz/courses/20184/master-of-educational-leadership-medld" target="_blank" rel="noopener noreferrer">entry details</a></li>
+<li>University of Waikato — <a href="https://www.topuniversities.com/node/3164614" target="_blank" rel="noopener noreferrer">Master of Educational Leadership</a>, <a href="https://knowyourcv.careers.govt.nz/qualifications/view/WI0806/7002" target="_blank" rel="noopener noreferrer">total fees</a></li>
+<li>NZTC — <a href="https://nztertiarycollege.ac.nz/early-childhood-education/postgraduate-qualifications/master-early-childhood-education" target="_blank" rel="noopener noreferrer">Master of Early Childhood Education</a>, <a href="https://www.nztertiarycollege.ac.nz/early-childhood-education/postgraduate-qualifications/postgraduate-certificate-education-leadership-and-management" target="_blank" rel="noopener noreferrer">Postgraduate Certificate in Education (Leadership and Management)</a></li>
+</ul>
+<p><strong>Out-of-industry roles in Whanganui</strong></p>
+<ul>
+<li>Ministry of Education — <a href="https://ministrycareers.education.govt.nz/job/Whanganui-Manager%2C-Integrated-Services/1362979966/" target="_blank" rel="noopener noreferrer">Manager, Integrated Services, Whanganui</a>, <a href="https://www.jobleads.com/nz/job/senior-education-advisor--northland--efd553bd8ab616a02ddde0ab523bc605e" target="_blank" rel="noopener noreferrer">senior adviser pay example</a></li>
+<li>Ministry of Social Development — <a href="https://jobs.msd.govt.nz/MSD/job/Whanganui-Case-Manager-%28Phone-Based%29-Whanganui/1364369266/" target="_blank" rel="noopener noreferrer">Case Manager (Phone-Based), Whanganui</a></li>
+<li>Ara Poutama Aotearoa — <a href="https://www.careerjet.co.nz/jobad/nz9825c93ec444636a686e065e10ee79d3" target="_blank" rel="noopener noreferrer">Case Manager, Whanganui Prison</a>, <a href="https://mahi.corrections.govt.nz/jobs/apa-1929469" target="_blank" rel="noopener noreferrer">Probation Officer, Manawatū-Whanganui</a></li>
+<li>Raukawa Whānau Ora — <a href="https://mahi.co.nz/current-vacancies/view/23386" target="_blank" rel="noopener noreferrer">Family Start roles, Manawatū-Whanganui</a>; <a href="https://grabjobs.co/nz/job/full-time/others/whanau-kaitiaki-family-start-161279010" target="_blank" rel="noopener noreferrer">Family Start pay example</a></li>
+<li>Open Home Foundation — <a href="https://jobs.y-axis.com/jobs/family-whanau-visit-supervisor-whanganui-open-home-foundation" target="_blank" rel="noopener noreferrer">Family/Whānau Visit Supervisor, Whanganui</a></li>
+<li>Whanganui District Council — <a href="https://www.whanganui.govt.nz/Your-Council/Working-for-Us/Vacancies" target="_blank" rel="noopener noreferrer">Vacancies</a>, <a href="https://applynow.net.au/jobs/110674-senior-policy-advisor" target="_blank" rel="noopener noreferrer">senior policy adviser pay example</a></li>
+<li>Te Oranganui — <a href="https://mahi.co.nz/current-vacancies/view/21384" target="_blank" rel="noopener noreferrer">Iwi health and social services, Whanganui</a>; <a href="https://nz.seek.com/Te-Wharewaka-o-Poneke-jobs" target="_blank" rel="noopener noreferrer">navigator pay example</a></li>
+<li>Te Puni Kōkiri — <a href="https://tpk.govt.nz/mo-te-puni-kokiri/our-stories-and-media/bends-of-the-awa-bring-regional-manager-nancy-tuai" target="_blank" rel="noopener noreferrer">Te Tai Hauāuru offices including Whanganui</a></li>
+<li>Te Whatu Ora Whanganui — <a href="https://jobs.govt.nz/jobs/Manawatu-Whanganui/1903445" target="_blank" rel="noopener noreferrer">Example role</a></li>
+<li>Oranga Tamariki — <a href="https://jobs.govt.nz/jobs/41114" target="_blank" rel="noopener noreferrer">Social Worker, Whanganui site</a>, <a href="https://nz.karier.co/amp/resource-worker-whanganui-at-new-zealand-government-32bab531" target="_blank" rel="noopener noreferrer">casual resource worker</a></li>
+</ul>
+<p><strong>Inspiration stories</strong></p>
+<ul>
+<li>Whanganui Chronicle — <a href="https://www.nzherald.co.nz/whanganui-chronicle/business/pre-school-venture-finds-niche-market/2TL6MKPD4KTKIBD3ECI7DSJY54" target="_blank" rel="noopener noreferrer">Pre school venture finds niche market (PAUA)</a></li>
+<li>Yellow — <a href="https://consumer-portal.yellow.co.nz/y/paua-early-childhood-tauranga" target="_blank" rel="noopener noreferrer">PAUA Early Childhood business listing</a></li>
+<li>Stuff — <a href="https://www.stuff.co.nz/business/small-business/123161809/building-kids-toys-turned-from-hobby-into-thriving-business-for-christchurch-couple" target="_blank" rel="noopener noreferrer">Building kids' toys turned from hobby into thriving business</a></li>
+<li>Yahoo News NZ — <a href="https://nz.news.yahoo.com/former-teacher-creates-7-figure-171400089.html" target="_blank" rel="noopener noreferrer">Former teacher creates seven-figure business</a></li>
+<li>Simply Stated Media — <a href="https://simplystatedmedia.com/entrepreneur-lisa-vodola/" target="_blank" rel="noopener noreferrer">Kindergarten teacher to entrepreneur</a></li>
+<li>NZ Herald — <a href="https://www.nzherald.co.nz/nz/childcare-owner-holidayed-overseas-while-tax-debt-mounted-over-250000/RNUTSX7TJFT5COZO6SV6UGR2EA/" target="_blank" rel="noopener noreferrer">Cautionary example: home-based operator's tax debts</a></li>
+</ul></div>
+</section>
+</main>
+
+<section class="morning" aria-labelledby="morning-h">
+  <h2 id="morning-h">Good morning. What's first?</h2>
+  <p>Pick one step from today and do it this week. A new future is built one small move at a time.</p>
+  <a href="#next">Back to next steps</a>
+  <small>Research current to 5 November 2026. Pay figures and vacancies come from published listings and agreements and change often, so check each source before acting on it.</small>
+</section>
+
+<nav class="dock" aria-label="Chapters"><ul><li><a href="#summary" aria-label="The short version" title="The short version"><span class="tile" style="--g:linear-gradient(140deg,#3a3f9e,#7b5cd6)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17h18M6 17a6 6 0 0 1 12 0M12 5v3M5.6 8.6l2 2M18.4 8.6l-2 2"/></svg></span><span class="dock-label">Start</span></a></li><li><a href="#whanganui" aria-label="Can it be done from Whanganui?" title="Can it be done from Whanganui?"><span class="tile" style="--g:linear-gradient(140deg,#1f6f8b,#3fb0c9)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11z"/><circle cx="12" cy="10" r="2.2"/></svg></span><span class="dock-label">Whanganui</span></a></li><li><a href="#ero" aria-label="Option 1: Education Review Office" title="Option 1: Education Review Office"><span class="tile" style="--g:linear-gradient(140deg,#5b3fa0,#c05ac0)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="5.5"/><path d="M15 15l5 5M8.5 10.5l1.6 1.6 3-3.2"/></svg></span><span class="dock-label">ERO</span></a></li><li><a href="#teacher-education" aria-label="Option 2: Teacher education" title="Option 2: Teacher education"><span class="tile" style="--g:linear-gradient(140deg,#2d5fae,#5aa7f0)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5-10-5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg></span><span class="dock-label">Lecturing</span></a></li><li><a href="#pld" aria-label="Option 3: Professional learning and development" title="Option 3: Professional learning and development"><span class="tile" style="--g:linear-gradient(140deg,#a0476b,#f08a6a)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15V6a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H8l-4 3z"/><path d="M20 9v8l-3-2h-5"/></svg></span><span class="dock-label">PLD</span></a></li><li><a href="#management" aria-label="Option 4: Centre and area management" title="Option 4: Centre and area management"><span class="tile" style="--g:linear-gradient(140deg,#3b7d5a,#7cc98e)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V8l8-4 8 4v12M9 20v-5h6v5M3 20h18"/></svg></span><span class="dock-label">Management</span></a></li><li><a href="#more-ece" aria-label="More options inside ECE" title="More options inside ECE"><span class="tile" style="--g:linear-gradient(140deg,#7a4fb0,#e07ab0)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><path d="M16.5 13v7M13 16.5h7"/></svg></span><span class="dock-label">More ECE</span></a></li><li><a href="#outside" aria-label="Out-of-industry options in Whanganui" title="Out-of-industry options in Whanganui"><span class="tile" style="--g:linear-gradient(140deg,#b0592b,#f2b04a)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M15.5 8.5l-2 5-5 2 2-5 5-2z"/></svg></span><span class="dock-label">Outside ECE</span></a></li><li><a href="#stories" aria-label="Teachers who started businesses" title="Teachers who started businesses"><span class="tile" style="--g:linear-gradient(140deg,#2f8a6a,#a8de6a)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-8M12 13c0-4 3-7 7-7 0 4-3 7-7 7zM12 15c0-3-2.5-5.5-6-5.5 0 3 2.5 5.5 6 5.5z"/></svg></span><span class="dock-label">Stories</span></a></li><li><a href="#compare" aria-label="Options compared" title="Options compared"><span class="tile" style="--g:linear-gradient(140deg,#3c5ab0,#8fb4ff)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20V10M12 20V4M19 20v-7"/></svg></span><span class="dock-label">Compare</span></a></li><li><a href="#pay" aria-label="Potential pay" title="Potential pay"><span class="tile" style="--g:linear-gradient(140deg,#b07a1f,#f6d35a)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M14.5 9.2c-.5-.8-1.4-1.2-2.5-1.2-1.4 0-2.5.8-2.5 2 0 2.7 5 1.4 5 4 0 1.2-1.1 2-2.5 2-1.2 0-2.1-.5-2.6-1.3M12 6.5V8M12 16v1.5"/></svg></span><span class="dock-label">Pay</span></a></li><li><a href="#strengths" aria-label="What you already bring" title="What you already bring"><span class="tile" style="--g:linear-gradient(140deg,#c0503a,#f7a35c)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.8z"/></svg></span><span class="dock-label">Strengths</span></a></li><li><a href="#study" aria-label="Part-time master&#x27;s programmes" title="Part-time master&#x27;s programmes"><span class="tile" style="--g:linear-gradient(140deg,#2c6da0,#6fd0e6)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5zM4 20.5A2.5 2.5 0 0 0 6.5 23H20"/></svg></span><span class="dock-label">Study</span></a></li><li><a href="#next" aria-label="Next steps" title="Next steps"><span class="tile" style="--g:linear-gradient(140deg,#d06a2a,#ffc36a)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h12M13 6l6 6-6 6"/></svg></span><span class="dock-label">Next steps</span></a></li><li><a href="#references" aria-label="References" title="References"><span class="tile" style="--g:linear-gradient(140deg,#4a5a8a,#9fb0d8)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></span><span class="dock-label">Sources</span></a></li></ul></nav>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  // Sky keyframes: [progress, top colour, bottom colour]
+  var K = [
+    [0.00, [11,17,49],   [26,33,80]],
+    [0.20, [27,31,92],   [74,52,122]],
+    [0.42, [60,64,150],  [214,118,122]],
+    [0.62, [88,140,214], [247,183,106]],
+    [0.82, [122,190,240],[255,222,170]],
+    [1.00, [150,212,250],[234,246,255]]
+  ];
+  function mix(a, b, t) { return a.map(function (v, i) { return Math.round(v + (b[i] - v) * t); }); }
+  function at(p) {
+    for (var i = 0; i < K.length - 1; i++) {
+      if (p <= K[i + 1][0]) {
+        var t = (p - K[i][0]) / (K[i + 1][0] - K[i][0]);
+        return [mix(K[i][1], K[i + 1][1], t), mix(K[i][2], K[i + 1][2], t)];
+      }
+    }
+    return [K[K.length - 1][1], K[K.length - 1][2]];
+  }
+  var clockT = document.querySelector('.clock .t'), clockL = document.querySelector('.clock .l');
+  var chapters = Array.prototype.slice.call(document.querySelectorAll('.chapter'));
+  var dockLinks = {};
+  document.querySelectorAll('.dock a').forEach(function (a) { dockLinks[a.getAttribute('href').slice(1)] = a; });
+  var current = null, ticking = false;
+  function fmt(mins) { var h = Math.floor(mins / 60), m = Math.floor(mins % 60); return h + ':' + (m < 10 ? '0' : '') + m + ' am'; }
+  function update() {
+    ticking = false;
+    var max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+    var p = Math.min(1, Math.max(0, window.scrollY / max));
+    var c = at(p);
+    root.style.setProperty('--sky-top', 'rgb(' + c[0].join(',') + ')');
+    root.style.setProperty('--sky-bottom', 'rgb(' + c[1].join(',') + ')');
+    root.style.setProperty('--stars', Math.max(0, 1 - p * 2.2).toFixed(3));
+    root.style.setProperty('--sun', Math.min(1, Math.max(0, (p - 0.25) / 0.6)).toFixed(3));
+    clockT.textContent = fmt(4 * 60 + 45 + p * 255);   // 4:45 am to 9:00 am
+    root.classList.toggle('day', p > 0.6);
+    var line = window.innerHeight * 0.35, active = null;
+    chapters.forEach(function (s) { if (s.getBoundingClientRect().top < line) active = s; });
+    var label = active ? active.getAttribute('data-label') : (p > 0.97 ? 'Morning' : 'Before dawn');
+    if (p > 0.97) label = 'Morning';
+    clockL.textContent = label;
+    var id = active ? active.id : null;
+    if (id !== current) {
+      if (current && dockLinks[current]) dockLinks[current].removeAttribute('aria-current');
+      if (id && dockLinks[id]) {
+        dockLinks[id].setAttribute('aria-current', 'true');
+        var d = document.querySelector('.dock'), a = dockLinks[id];
+        var target = a.offsetLeft - d.clientWidth / 2 + a.clientWidth / 2;
+        d.scrollTo({ left: target, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+      }
+      current = id;
+    }
+  }
+  window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  function stamp() {
+    var max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+    chapters.forEach(function (c) {
+      var top = c.getBoundingClientRect().top + window.scrollY - window.innerHeight * 0.35;
+      var p = Math.min(1, Math.max(0, top / max));
+      var t = fmt(4 * 60 + 45 + p * 255);
+      c.querySelector('.time').textContent = t;
+      c.setAttribute('data-time', t);
+    });
+  }
+  window.addEventListener('resize', function () { stamp(); update(); });
+  window.addEventListener('load', stamp);
+  stamp(); update();
+})();
+</script>
+</body>
+</html>
